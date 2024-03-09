@@ -31,4 +31,4 @@ documentation in the separate subdirectory “doc” using the Doxygen tool.
 1. Input file always contains data in proper format - HH:MM,HH:MM
 2. Time range 00:00-24:00 will be maintained in the input file,
  so no validation of time range in currently added
-3. Entering time in the input time will always be less than out time.
+3. Entering time in the input file will always be less than out time.
