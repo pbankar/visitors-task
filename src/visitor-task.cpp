@@ -4,10 +4,10 @@
 #include <vector>
 #include <fstream>
 
-/// @brief Compare time in HH:MM format, if time1<=time2 returns true else returns false
-/// @param time1 
-/// @param time2 
-/// @return bool
+/// @brief Compares time in HH:MM format, 
+/// @param time1 : String in HH:MM format
+/// @param time2 : String in HH:MM format
+/// @return if time1<=time2 returns true else returns false
 bool isTime1LessThanTime2(const std::string& time1, const std::string& time2) {
     std::istringstream ss1(time1);
     std::istringstream ss2(time2);
@@ -22,9 +22,9 @@ bool isTime1LessThanTime2(const std::string& time1, const std::string& time2) {
 }
 
 
-/// @brief Actual alogrithm that finds the max visitors in perticaular interval
-/// @param arrival 
-/// @param departure 
+/// @brief Actual alogrithm that finds the max visitors in particular interval
+/// @param arrival : Vector that contains arrival time in HH:MM format string
+/// @param departure : Vector that contains departure time in HH:MM format string
 void findMaxVisitors(std::vector<std::string>& arrival,std::vector<std::string>& departure) {
 
     //Size of both the vectors is same
@@ -65,9 +65,9 @@ void findMaxVisitors(std::vector<std::string>& arrival,std::vector<std::string>&
 }
 
 /// @brief Get file contents and populate arrival and departure vector
-/// @param filename 
-/// @param arrival 
-/// @param departure 
+/// @param filename : Which was provided while running application
+/// @param arrival : Arrival time will be fetched from file and populated in this vector
+/// @param departure : Departure time will be fetched from file and populated in this vector
 void readFileToVector(const std::string& filename,std::vector<std::string>& arrival,std::vector<std::string>& departure){
     std::ifstream r_file;
     r_file.open(filename);
@@ -86,8 +86,8 @@ void readFileToVector(const std::string& filename,std::vector<std::string>& arri
 }
 
 /// @brief Get the record count to reseve vector size to avoid resizing of vector
-/// @param filename 
-/// @return int
+/// @param filename : Which was provided while running application
+/// @return integer count : Number of lines preent in file
 int GetRecordCount(const std::string& filename)
 {
     std::ifstream r_file;
@@ -105,8 +105,8 @@ int GetRecordCount(const std::string& filename)
 
 /// @brief Application driver main fuction which takes input file from command line
 /// @param argc 
-/// @param argv 
-/// @return 
+/// @param argv : Input file with complete path
+/// @return integer value 
 int main(int argc,  char **argv) {
 
     std::vector<std::string> arrival,departure;

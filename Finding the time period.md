@@ -1,4 +1,4 @@
-# findMaxVisitors function explaination
+# Finding the time period doccument that explains findMaxVisitors function
 
 This algorithm is designed to find the time period with the maximum number of visitors given two vectors, arrival and departure representing the arrival and departure times of visitors. 
 Here's a step-by-step explanation of the algorithm:
